@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-31-cYR">
+                                <rect key="frame" x="10" y="629" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="开始定位">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="已经定位"/>
+                                <connections>
+                                    <action selector="startLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bkF-E3-Fey"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2b-pc-obG">
+                                <rect key="frame" x="284" y="629" width="75" height="34"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="停止定位">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FDo-3f-sdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUg-Xy-RPa">
+                                <rect key="frame" x="150" y="625" width="75" height="34"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="跟随状态">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startFollowing:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9So-S7-GKs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4lC-31-cYR" secondAttribute="bottom" constant="8" id="0hn-mE-bkt"/>
+                            <constraint firstItem="4lC-31-cYR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="WcO-jj-jKT"/>
+                            <constraint firstAttribute="bottom" secondItem="f2b-pc-obG" secondAttribute="bottom" constant="4" id="XyM-50-nsE"/>
+                            <constraint firstAttribute="bottom" secondItem="sUg-Xy-RPa" secondAttribute="bottom" constant="8" id="bz4-Ql-U9n"/>
+                            <constraint firstAttribute="trailing" secondItem="f2b-pc-obG" secondAttribute="trailing" constant="16" id="fN2-Yu-zLc"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="startLocationBtn" destination="4lC-31-cYR" id="3nh-C0-ZFv"/>
+                        <outlet property="stopLocationBtn" destination="f2b-pc-obG" id="Jpf-5T-duH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.5" y="393.5"/>
+        </scene>
+    </scenes>
+</document>
